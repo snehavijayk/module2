@@ -1,5 +1,6 @@
-FROM openjdk:17-oracle
-ADD target/*.jar app.jar
-ENV JAVA_OPTS=''
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
-EXPOSE 8765
+FROM openjdk:8-jdk-alpine
+LABEL maintainer="snehavbkattimani@gmail.com"
+VOLUME /main-app
+ADD build/libs/spring-boot-postgresql-base-project-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar","/app.jar"]

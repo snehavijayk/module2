@@ -25,3 +25,7 @@
 = 2022-07-15 11:26:04 - Initializing Servlet 'dispatcherServlet'
 = 2022-07-15 11:26:04 - Completed initialization in 2 ms
 = 2022-07-15 11:26:06 - Init duration for springdoc-openapi is: 1145 ms
+= 2022-07-15 12:36:23 - Application shutdown requested.
+= 2022-07-15 12:36:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+= 2022-07-15 12:36:23 - HikariPool-1 - Shutdown initiated...
+= 2022-07-15 12:36:23 - HikariPool-1 - Shutdown completed.
