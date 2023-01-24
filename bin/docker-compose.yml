@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  api_service:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres_db
+    links:
+      - postgres_db:database
+  postgres_db:
+    image: "postgres:latest"
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: student
+      POSTGRES_PASSWORD: postgress
